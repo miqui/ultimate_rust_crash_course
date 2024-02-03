@@ -9,7 +9,7 @@ fn main() {
     // The `print_difference` function is defined below the `main` function. It may help if you look
     // at how it is defined.
     //
-    //print_difference( ... );   // Uncomment and finish this line
+    print_difference(coords.0, coords.1);   // Uncomment and finish this line
 
 
     // 2. We want to use the `print_array` function to print coords...but coords isn't an array!
@@ -17,7 +17,8 @@ fn main() {
     // information from coords.  Uncomment the print_array line and run the code.
     //
     //let coords_arr...               // create an array literal out of parts of `coord` here
-    //print_array(coords_arr);        // and pass it in here (this line doesn't need to change)
+    let coords_arr = [coords.0, coords.1];
+    print_array(coords_arr);        // and pass it in here (this line doesn't need to change)
 
 
     let series = [1, 1, 2, 3, 5, 8, 13];
@@ -32,7 +33,7 @@ fn main() {
     // 4. Pass the `on_off` function the value `true` from the variable `mess`.  Done correctly,
     // `cargo run` will produce the additional output "Lights are on!" I'll get you started:
     //
-    //on_off(mess.2 ...);
+    on_off(mess.2[1].0);
 
     // 5.  What a mess -- functions in a binary! Let's get organized!
     //
@@ -48,7 +49,7 @@ fn main() {
     // output. Then go refactor the print_distance() function according to the
     // instructions in the comments inside that function.
 
-    // print_distance(coords);
+    print_distance(coords);
 }
 
 fn print_difference(x: f32, y: f32) {
